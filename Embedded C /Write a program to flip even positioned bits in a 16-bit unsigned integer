@@ -1,0 +1,11 @@
+#include <stdio.h>
+unsigned int flipEvenBits(unsigned int num) {
+unsigned int mask = 0xAAAA; // Binary pattern with even bits set
+return num ^ mask;
+}
+int main() {
+unsigned int num = 0b1010101010101010; // Example 16-bit unsigned
+integer
+num = flipEvenBits(num);
+printf("Modified number: %d\n", num);
+return 0;
