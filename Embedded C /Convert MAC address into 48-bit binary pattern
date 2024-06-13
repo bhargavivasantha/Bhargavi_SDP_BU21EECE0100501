@@ -1,0 +1,13 @@
+#include <stdio.h>
+void unpackIPAddress(unsigned int ip) {
+int a, b, c, d;
+a = (ip >> 24) & 255;
+b = (ip >> 16) & 255;
+c = (ip >> 8) & 255;
+d = ip & 255;
+printf("Unpacked IP address: %d.%d.%d.%d\n", a, b, c, d);
+}
+int main() {
+unsigned int packedIP = 3232235777; // Example packed IP address
+unpackIPAddress(packedIP);
+return 0;
