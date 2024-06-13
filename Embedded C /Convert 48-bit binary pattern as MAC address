@@ -1,0 +1,15 @@
+#include <stdio.h>
+void macToBinaryPattern(char *mac) {
+unsigned long long int binary = 0;
+sscanf(mac, "%2hhx:%2hhx:%2hhx:%2hhx:%2hhx:%2hhx", (unsigned char
+*)&binary,
+(unsigned char *)&binary + 1, (unsigned char *)&binary + 2,
+(unsigned char *)&binary + 3, (unsigned char *)&binary + 4,
+(unsigned char *)&binary + 5);
+printf("Binary pattern: %llx\n", binary);
+}
+int main() {
+char mac[] = "12:34:56:78:9a:bc"; // Example MAC address
+macToBinaryPattern(mac);
+return 0;
+}
