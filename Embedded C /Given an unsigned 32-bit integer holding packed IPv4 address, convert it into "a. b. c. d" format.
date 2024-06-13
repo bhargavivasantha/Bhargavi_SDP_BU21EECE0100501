@@ -1,0 +1,15 @@
+#include <stdio.h>
+int countSetBits(unsigned int num) {
+int count = 0;
+while (num) {
+count += num & 1;
+num >>= 1;
+}
+return count;
+}
+int main() {
+unsigned int num = 0b10101010; // Example binary pattern
+printf("Number of set bits: %d\n", countSetBits(num));
+return 0;
+}
+
