@@ -1,0 +1,12 @@
+#include <stdio.h>
+void binaryPatternToMac(unsigned long long int binary)
+{
+printf("MAC address: %02llx:%02llx:%02llx:%02llx:%02llx:%02llx\n",
+(binary >> 40) & 0xFF, (binary >> 32) & 0xFF, (binary >> 24) & 0xFF,
+(binary >> 16) & 0xFF, (binary >> 8) & 0xFF, binary & 0xFF);
+}
+int main() {
+unsigned long long int binary = 0x123456789abc; // Example binary pattern
+binaryPatternToMac(binary);
+return 0;
+}
