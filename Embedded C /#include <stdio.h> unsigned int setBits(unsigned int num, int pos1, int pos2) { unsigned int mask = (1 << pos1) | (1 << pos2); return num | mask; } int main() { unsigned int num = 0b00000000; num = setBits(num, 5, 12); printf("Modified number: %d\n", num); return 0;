@@ -1,0 +1,9 @@
+#include <stdio.h>
+unsigned int setBits(unsigned int num, int pos1, int pos2) {
+unsigned int mask = (1 << pos1) | (1 << pos2);
+return num | mask;
+}
+int main() {
+unsigned int num = 0b00000000; num = setBits(num, 5, 12);
+printf("Modified number: %d\n", num);
+return 0;
